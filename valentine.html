@@ -1,0 +1,112 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day, Shaashu! ❤️</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fecfef, #ffecd2);
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 3em;
+            color: #e91e63;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.5em;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+        .stickers {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        .sticker {
+            font-size: 4em;
+            margin: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .heart {
+            position: absolute;
+            font-size: 2em;
+            color: #ff4081;
+            animation: fall 5s linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-100vh) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+        img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts" id="hearts"></div>
+    <div class="container">
+        <h1>Happy Valentine's Day, Shaashu! 💕</h1>
+        <p>My dearest Shaashu, you're the cutest thing in my life, like a fluffy kitten surrounded by blooming flowers. I love you more than words can say! 🐱🌸❤️</p>
+        <div class="stickers">
+            <div class="sticker">🐱</div>
+            <div class="sticker">🌸</div>
+            <div class="sticker">💖</div>
+            <div class="sticker">🐾</div>
+            <div class="sticker">🌺</div>
+        </div>
+        <p>Here's a little gallery of cute things that remind me of you:</p>
+        <img src="https://via.placeholder.com/200x200/ffcccc/000000?text=Cute+Cat" alt="Cute Cat">
+        <img src="https://via.placeholder.com/200x200/ffcccc/000000?text=Flower+Sticker" alt="Flower Sticker">
+        <img src="https://via.placeholder.com/200x200/ffcccc/000000?text=Love+Hearts" alt="Love Hearts">
+        <p>Will you be my Valentine forever? 😘</p>
+    </div>
+
+    <script>
+        // Generate floating hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDelay = Math.random() * 5 + 's';
+            document.getElementById('hearts').appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 500);
+    </script>
+</body>
+</html>
